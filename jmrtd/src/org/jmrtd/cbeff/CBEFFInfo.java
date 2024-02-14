@@ -78,3 +78,78 @@ public interface CBEFFInfo {
 	BIOMETRIC_SUBTYPE_MASK_RING_FINGER = 0x10,		/* xxx100xx */
 	BIOMETRIC_SUBTYPE_MASK_LITTLE_FINGER = 0x14;	/* xxx101xx */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Architectural Decision Records (ADRs)
+	An Architectural Decision (AD) is a justified software design choice that addresses a functional or non-functional requirement that is architecturally significant.
+		An Architecturally Significant Requirement (ASR) is a requirement that has a measurable effect on a software system’s architecture and quality. An Architectural Decision Record (ADR) captures a single AD and its rationale; the collection of ADRs created and maintained in a project constitute its decision log. All these are within the topic of Architectural Knowledge Management (AKM), but ADR usage can be extended to design and other decisions (“any decision record”).
+
+		The aim of the GitHub adr organization is to:
+
+		Motivate the need for and benefits of AD capturing and establish a common vocabulary
+		Strengthen the tooling around ADRs, in support of agile practices as well as iterative and incremental software engineering processes
+		Provide pointers to public knowledge in the context of AKM and ADRs
+		The repository for the Website of the ADR organization is https://github.com/adr/adr.github.io.
+
+		ADRs in the Media
+		Love Unrequited: The Story of Architecture, Agile, and How Architecture Decision Records Brought Them Together, Michael Keeling in the Pragmatic Designer column of IEEE Software Vol. 39 Issue 4 (2022) (PDF)
+		Chapter 3 of “Patterns for API Design: Simplifying Integration with Loosely Coupled Message Exchanges” in the Addison Wesley Signature Series at Pearson features six narratives guiding through the conceptual level of API design: 29 recurring decisions with options and criteria. Learn more in this blog post.
+		Architectural decision capturing is positioned as one of the essential activities in Design Practice Reference, a LeanPub e-Book.
+		(German) Gut dokumentiert: Architecture Decision Records by @obfischer published at heise online.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
