@@ -106,10 +106,12 @@ import org.jmrtd.lds.SecurityInfo;
  */
 public class Passport {
 
+	// open-source library that provides support for various cryptographic algorithms and protocols.
 	private static final Provider BC_PROVIDER = JMRTDSecurityProvider.getBouncyCastleProvider();
-
+	// List is a generic interface in Java that represents a collection of elements, and BACKeySpec is a type parameter indicating the type of elements in the list.
 	private final static List<BACKeySpec> EMPTY_TRIED_BAC_ENTRY_LIST = Collections.emptyList();
-
+	// Collections.emptyList() returns an empty immutable list.
+	// Immutable means that the list cannot be modified after it is created. This is useful for creating constants that represent empty collections.
 	private final static List<Certificate> EMPTY_CERTIFICATE_CHAIN = Collections.emptyList();
 
 	/** The hash function for DG hashes. */
@@ -119,26 +121,31 @@ public class Passport {
 	private VerificationStatus verificationStatus;
 
 	/* We use a cipher to help implement Active Authentication RSA with ISO9796-2 message recovery. */
+	// transient --temporary -- shortlived
 	private transient Signature rsaAASignature;
 	private transient MessageDigest rsaAADigest;	
 	private transient Cipher rsaAACipher;
 	private transient Signature ecdsaAASignature;
 	private transient MessageDigest ecdsaAADigest;
-
+	// short is a primitive data type in Java that reps a 16-bit signed integer.
+	// EF_CVCA is a constant rep the file identifier (FID) for the Card Verifiable Certificate Authority (CVCA) file in a passport chip.
 	private short cvcaFID = PassportService.EF_CVCA;
-
+	// Logical Data Structure
 	private LDS lds;
-
+	// false: indicating that PKIX revocation checking is not enabled.
 	private static final boolean IS_PKIX_REVOCATION_CHECING_ENABLED = false;
 
 	private PrivateKey docSigningPrivateKey;
 
 	private CardVerifiableCertificate cvcaCertificate;
 
+	// Extended Access Control
 	private PrivateKey eacPrivateKey;
 
+	// Active Authentication
 	private PrivateKey aaPrivateKey;
 
+	// Logger is a class in the java.util.logging package that is used for logging messages.
 	private static final Logger LOGGER = Logger.getLogger("org.jmrtd");
 
 	/*
@@ -146,6 +153,8 @@ public class Passport {
 	 * - Move the URI interpretation functionality to clients.
 	 * - Limit public interface in Passport etc. to CertStore / KeyStore / ? extends Key / Certificate only.
 	 */
+
+	// reps a trust store for MRTDs. Accessible only within the class where it is declared, and its value can be set and accessed via methods defined within that class
 	private MRTDTrustStore trustManager;
 
 	private PassportService service;
